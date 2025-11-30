@@ -1,0 +1,23 @@
+stages:
+  - build
+  - test
+  - deploy
+
+build-job:
+  stage: build
+  script:
+    - echo "Building the project..."
+    - mkdir build && echo "<h1>Hello GitLab CI/CD</h1>" > build/index.html
+
+test-job:
+  stage: test
+  script:
+    - echo "Running tests..."
+    - echo "All tests passed!"
+
+
+deploy-job:
+  stage: deploy
+  script:
+    - echo "Deploying the project..."
+    - echo "Deployed successfully!"
